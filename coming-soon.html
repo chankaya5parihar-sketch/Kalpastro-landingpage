@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon — Kalpastro</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #FEFDF7;
+            color: #1C1917;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        img.logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            margin-bottom: 12px;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1C1917;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F1F6E0;
+            color: #6A8C02;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 7vw, 64px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #1C1917;
+        }
+
+        h1 mark {
+            background: #FFD700;
+            padding: 0 8px;
+            border-radius: 8px;
+            color: #1C1917;
+        }
+
+        p.sub {
+            font-size: 17px;
+            color: #57534E;
+            max-width: 440px;
+            line-height: 1.7;
+            margin-bottom: 44px;
+        }
+
+        .notify-form {
+            display: flex;
+            gap: 10px;
+            max-width: 420px;
+            width: 100%;
+            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .notify-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 14px 20px;
+            border-radius: 999px;
+            border: 2px solid #E5E5E3;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+            background: white;
+            color: #1C1917;
+        }
+
+        .notify-form input:focus {
+            border-color: #82A903;
+        }
+
+        .notify-form input::placeholder {
+            color: #A8A29E;
+        }
+
+        .notify-form button {
+            background: #FFD700;
+            color: #1C1917;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            box-shadow: 0 4px 16px rgba(255,215,0,0.35);
+            white-space: nowrap;
+        }
+
+        .notify-form button:hover {
+            background: #E6C200;
+            transform: translateY(-1px);
+        }
+
+        .notify-form button:active {
+            transform: scale(0.97);
+        }
+
+        .success-msg {
+            display: none;
+            background: #F1F6E0;
+            color: #6A8C02;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 480px;
+            margin-bottom: 48px;
+        }
+
+        .feature-chip {
+            background: white;
+            border: 1.5px solid rgba(28,25,23,0.08);
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #57534E;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(28,25,23,0.05);
+        }
+
+        .back-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: #A8A29E;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: #1C1917; }
+    </style>
+</head>
+<body>
+
+    <img src="logo.png" alt="Kalpastro" class="logo">
+    <div class="brand">Kalpastro</div>
+
+    <div class="badge">🌿 Coming Soon</div>
+
+    <h1>We're almost<br>ready for you.<br><mark>Stay tuned.</mark></h1>
+
+    <p class="sub">
+        Kalpastro is putting the final touches on your personalised Vedic astrology experience. Be the first to know when we launch.
+    </p>
+
+    <!-- ── Replace YOUR_FORM_ID with your Formspree form ID ── -->
+    <form class="notify-form" id="form"
+          action="https://formspree.io/f/mdaykkgr"
+          method="POST">
+        <input type="email" name="email" id="emailInput" placeholder="Enter your email" required />
+        <button type="submit">Notify Me →</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+        ✓ You're on the list! We'll reach out when we launch.
+    </div>
+
+    <div class="features">
+        <div class="feature-chip"><span>🌙</span> Daily Horoscope</div>
+        <div class="feature-chip"><span>🕉️</span> 6 Daily Rituals</div>
+        <div class="feature-chip"><span>🤖</span> Jyotish AI Chat</div>
+        <div class="feature-chip"><span>✨</span> Big Three</div>
+        <div class="feature-chip"><span>🧘</span> Calm Me Down</div>
+        <div class="feature-chip"><span>🌳</span> Your Archetype</div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to home</a>
+
+    <script>
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailInput').value.trim();
+            if (!email || !email.includes('@')) {
+                document.getElementById('emailInput').style.borderColor = '#ef4444';
+                return;
+            }
+
+            const btn = form.querySelector('button');
+            btn.textContent = 'Saving...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form),
+                });
+
+                if (res.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successMsg').style.display = 'block';
+                } else {
+                    btn.textContent = 'Try again →';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                btn.textContent = 'Try again →';
+                btn.disabled = false;
+            }
+        });
+
+        document.getElementById('emailInput').addEventListener('input', function() {
+            this.style.borderColor = '#E5E5E3';
+        });
+    </script>
+
+</body>
+</html>
